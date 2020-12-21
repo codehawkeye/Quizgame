@@ -35,4 +35,5 @@
 //       answer: "console.log"
 //     }
 //   ];
-  
+function startGame()
+      
