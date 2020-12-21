@@ -1,0 +1,22 @@
+*, *::before, *::after {
+box-sizing: border-box;
+font-family: sans-serif;
+}
+:root{
+    --hue-netral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+}
+
+body {
+    /* default color when nothing selected hue neutral */
+    --hue: var(var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(var(--hue) 100%, 20);
+}

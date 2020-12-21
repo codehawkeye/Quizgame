@@ -1,14 +1,37 @@
 !<!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>QUIZGAME</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <!--link to internal style sheet and JS script  -->
+    <link rel="stylesheet" href="style.css">
+    <!-- script sheet with "defer" attribuite to load after body -->
+    <script defer src="script.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
+  <!-- games container with header that stays constant -->
+  <div class="container">
+    <!-- question container with hide by default -->
+    <div id="question-container" id="hide">
+    <div id=" questions">Question</div>
+      <!-- quesiton grid with 4 buttons  -->
+      <div id="answer-buttons" class="btn-grid">
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn">Answer 4</button>
+      </div>
+    <!-- Start button control  -->
+    <div class="game controls">
+        <button id="start-btn" class="start-btn btn">Start Game?</button>
+        
+
+
+  </div>
+
   <body>
       
     <!-- Optional JavaScript -->
