@@ -302,3 +302,40 @@ let question = [
 
 
 ]
+const SCORE_POINT = 100
+const MAX_QUESTIONS = 5
+
+startGame = () => {
+    questionCounter = 0
+    score = 0
+    avalibileQuestions = [...questions]
+    getNewQuestion()
+}
+
+getNewQuestion = () => {
+    if (avalibileQuestions.length === 0 || questionsCounter > MAX_QUESTIONS) {
+        localStorage.setItem('mostRecentScore', score)
+
+        return window.location.asssign('/end.html')
+
+    }
+    questionCounter++
+    progressText.innerText = 'Question ${questionCounter} of ${MAX_QESTIONS}'
+    ProgressBarfull.style.width = '${(questionCounter/MAX_QUESTIONS) * 100}%'
+    
+
+    const questionsIndex = Math.floor(Math.random() * avalibileQuestions.length)
+    currentQuestion = avalibileQuestions[questionsIndex]
+    question.innerText = currentQuestion.question
+
+
+    choices.forEach(choice => {
+        const number = choice.dataset['number']
+        choice.innerText = currentQuestion['number']
+        choice.innerText = currentQuestion['choice' + number]
+        
+    })
+
+    avalibileQuestions.splice(questionsIndex, 1)
+
+}    
