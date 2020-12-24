@@ -1,84 +1,84 @@
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorall('.choice-text'));
-const progressText = document.querySelector('#ProgressText');
+const progressText = document.querySelector('#progressText');
 const ScoreText = document.querySelector('#score');
-const ProgressBarfull = document.querySelector('#ProgressBarFull');
+const progressBarfull = document.querySelector('#ProgressBarFull');
 
-let currentQuestion = { }
+let currentQuestion = {}
 let acceptingAnswers = true
 let score = 0
 let questionCounter = 0 
 let avalibileQuestion = []
 
-let question = [
+let questions = [
     {
         question: 'Mario was originally known.......',
-        choice: "Jumpman",
-        choice: "Super Plumber",
-        choice: "Dashing Dave",
-        choice: "Fixit Felix",
-        answer: "Jumpman",    
+        choice1: "Jumpman",
+        choice2: "Super Plumber",
+        choice3: "Dashing Dave",
+        choice4: "Fixit Felix",
+        answer: 1,    
     },
     {
         question: " Mario was originally a.........",
-        choice: "Janitor",
-        choice: "Carpenter",
-        choice: "Electrician",
-        choice: "Plumber",
-        answer: "Carpenter",   
+        choice1: "Janitor",
+        choice2: "Carpenter",
+        choice3: "Electrician",
+        choice4: "Plumber",
+        answer: 2,   
     },
     {
         question: "Mario's brother is named...........",
-        choice: "Wario",
-        choice: "luigi",
-        choice: "King Koopa",
-        choice: "Yoshi",
-        answer: "luigi",    
+        choice1: "Wario",
+        choice2: "luigi",
+        choice3: "King Koopa",
+        choice4: "Yoshi",
+        answer: 2,    
     },
 
     {
         question: " Super Mario was exclusively made for ..........",
-        choice: "Nintinto",
-        choice: "Atari",
-        choice: "Playstation",
-        choice: "xBox",
-        answer: "Nintindo",   
+        choice1: "Nintinto",
+        choice2: "Atari",
+        choice3: "Playstation",
+        choice4: "xBox",
+        answer: 1,   
     },
 
     {
         question: 'Wario first appeared in .........',
-        choice: "Super Mario Bros 2",
-        choice: "Doctor Mario",
-        choice: "Donkey Kong",
-        choice: "Super Mario Land 2",
-        answer: "Super Mario Land 2",    
+        choice1: "Super Mario Bros 2",
+        choice2: "Doctor Mario",
+        choice3: "Donkey Kong",
+        choice4: "Super Mario Land 2",
+        answer: 4,    
     },
 
     {
         question: "When Mario eats a super mushroom he.....",
-        choice: "gains a tail",
-        choice: "can throw fire balls",
-        choice: "Grows in size",
-        choice: "gains Invincibility",
-        answer: "Grows in size",   
+        choice1: "gains a tail",
+        choice2: "can throw fire balls",
+        choice3: "Grows in size",
+        choice4: "gains Invincibility",
+        answer: 3,   
     },
 
     {
         question: "The iconic main theme music to Super Mario Bro's is ...........",
-        choice: "Ground Theme",
-        choice: "Air Theme",
-        choice: "Mushroom Land Theme",
-        choice: "Carpenter's Dream Theme",
-        answer: "Ground Theme",    
+        choice1: "Ground Theme",
+        choice2: "Air Theme",
+        choice3: "Mushroom Land Theme",
+        choice4: "Carpenter's Dream Theme",
+        answer: 1,    
     },
 
     {
         question: " A Scene from Super Mario Bro's 3 appears in what 1889 movie?",
-        choice: "Back to the future",
-        choice: "The Wizard",
-        choice: "The Gamer",
-        choice: "Foot Loose",
-        answer: "The Wizard",   
+        choice1: "Back to the future",
+        choice2: "The Wizard",
+        choice3: "The Gamer",
+        choice4: "Foot Loose",
+        answer: 2,   
     },
     {
         question: 'what is...........',
@@ -288,7 +288,6 @@ let question = [
         answer: "A",    
     },
     
-
     {
         question: "what is...........",
         choice: "A",
@@ -316,7 +315,7 @@ getNewQuestion = () => {
     if (avalibileQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
-        return window.location.asssign('/end.html')
+        return window.location.assign('/end.html')
 
     }
     questionCounter++
@@ -331,7 +330,6 @@ getNewQuestion = () => {
 
     choices.forEach(choice => {
         const number = choice.dataset['number']
-        choice.innerText = currentQuestion['number']
         choice.innerText = currentQuestion['choice' + number]
         
     })
@@ -344,14 +342,14 @@ getNewQuestion = () => {
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
-        if (!acceptingAnswers) return
+        if(!acceptingAnswers) return
         
         acceptingAnswers = false
         const selectedChoice = e.target
         const selectedAnswer = selectedChoice.dataset['number']
         
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
-        if (classToApply === 'correct') {
+        if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
         }
         selectedChoice.parentElement.classList.add(classToApply)
