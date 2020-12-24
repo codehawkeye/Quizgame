@@ -10,11 +10,295 @@ let score = 0
 let questionCounter = 0 
 let avalibileQuestion = []
 
-let question = {
+let question = [
+    {
+        question: 'what is...........',
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",    
+    },
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",   
+    },
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",    
+    },
+
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",   
+    },
+
+    {
+        question: 'what is...........',
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",    
+    },
+
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",   
+    },
+
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",    
+    },
+
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",   
+    },
+    {
+        question: 'what is...........',
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",    
+    },
+
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",   
+    },
+
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",    
+    },
+
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",   
+    },
 
 
+    {
+        question: 'what is...........',
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",    
+    },
 
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",   
+    },
+
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",    
+    },
+
+
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",
+            
+    },
     
-}
+    {
+        question: 'what is...........',
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",    
+    },
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",   
+    },
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",    
+    },
+
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",   
+    },
+
+    {
+        question: 'what is...........',
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",    
+    },
+
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",   
+    },
+
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",    
+    },
+
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",   
+    },
+    {
+        question: 'what is...........',
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",    
+    },
+
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",   
+    },
+
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",    
+    },
+
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",   
+    },
 
 
+    {
+        question: 'what is...........',
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",    
+    },
+
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",   
+    },
+
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",    
+    },
+    
+
+    {
+        question: "what is...........",
+        choice: "A",
+        choice: "B",
+        choice: "c",
+        choice: "D",
+        answer: "A",
+            
+    }   
+
+
+
+]
