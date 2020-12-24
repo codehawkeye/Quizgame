@@ -302,8 +302,8 @@ let question = [
 
 
 ]
-const SCORE_POINT = 100
-const MAX_QUESTIONS = 5
+const SCORE_POINTS = 100
+const MAX_QUESTIONS = 4
 
 startGame = () => {
     questionCounter = 0
@@ -313,7 +313,7 @@ startGame = () => {
 }
 
 getNewQuestion = () => {
-    if (avalibileQuestions.length === 0 || questionsCounter > MAX_QUESTIONS) {
+    if (avalibileQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
         return window.location.asssign('/end.html')
@@ -338,4 +338,37 @@ getNewQuestion = () => {
 
     avalibileQuestions.splice(questionsIndex, 1)
 
-}    
+    acceptingAnswers = true
+    
+}   
+
+choices.forEach(choice => {
+    choice.addEventListener('click', e => {
+        if (!acceptingAnswers) return
+        
+        acceptingAnswers = false
+        const selectedChoice = e.target
+        const selectedAnswer = selectedChoice.dataset['number']
+        
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
+        if (classToApply === 'correct') {
+            incrementScore(SCORE_POINTS)
+        }
+        selectedChoice.parentElement.classList.add(classToApply)
+
+
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply)
+            getNewQuestion()
+
+        }, 1000)
+    })
+})
+
+
+incrementScore = num => {
+    score += num
+    ScoreText.innerText = score
+}
+
+startGame()
