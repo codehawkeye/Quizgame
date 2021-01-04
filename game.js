@@ -313,7 +313,7 @@ getNewQuestion = () => {
         var choiceEL = document.createElement("button")
         choiceEL.setAttribute("value",choice)
         choiceEL.textContent = choice
-        // 
+        // completed event lisner to select answer, cycle through next question, update timer, update score. 
         choiceEL.addEventListener('click',)
         choiceDiv.appendChild(choiceEL)
         
