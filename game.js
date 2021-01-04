@@ -305,6 +305,10 @@ startGame = () => {
     score = 0
     getNewQuestion()
 }
+getAnswer = (event) => {
+    console.log(event.target.value)
+ //get scurrent answer and compare to correct answer
+};
 
 getNewQuestion = () => {
     var currentQuestion = questions[questionCounter] 
@@ -314,8 +318,8 @@ getNewQuestion = () => {
         choiceEL.setAttribute("value",choice)
         choiceEL.textContent = choice
         // completed event lisner to select answer, cycle through next question, update timer, update score. 
-        choiceEL.addEventListener('click',)
         choiceDiv.appendChild(choiceEL)
+        choiceEL.addEventListener('click',getAnswer)
         
     })
         // if (avalibileQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
